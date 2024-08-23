@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
     /* Colors */
@@ -17,14 +17,18 @@
     box-sizing: border-box;
 }
 
-body,
 h1,
 p {
     margin: 0;
 }
 
 h1 {
+    font-style: normal;
     font-weight: 700;
+}
+
+img {
+    display: block;
 }
 
 body {
@@ -34,36 +38,44 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
+    padding: 0 1.75rem;
 }
 
 .card {
+    width: 20rem;
     background-color: hsl(var(--clr-white));
     display: flex;
     flex-direction: column;
     gap: 1.623rem;
     border-radius: 1.25rem;
     padding: 1rem 1rem 2.5rem 1rem;
-    box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
+    display: flex;
     justify-content: center;
-    text-align: center;
 }
 
 .card-header img {
-    width: 288px;
+    width: 100%;
     height: 288px;
     border-radius: 0.625rem;
 }
 
 .card-content {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: center;
+    gap: 1rem;
     text-align: center;
+    padding: 0 1rem;
 }
 
 .card-content h1 {
+    font-size: 1.375rem;
     color: hsl(var(--clr-slate-900));
     line-height: 120%;
 }
@@ -78,7 +90,8 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
